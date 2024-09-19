@@ -1,0 +1,265 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+}
+
+
+body {
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #570707;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+    color: #edfaff;
+    letter-spacing: 2px;
+}
+
+.nav-2 {
+    display: flex;
+    gap: 20px;
+}
+
+.header-btn {
+    text-decoration: none;
+    background-color: #8e8888;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-btn:hover {
+    background-color: #bb2424;
+    transform: scale(1.05);
+    color: white;
+}
+
+.header-btn h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+
+.main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main1 {
+    background-color: #8e8888;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.main1:hover {
+    transform: translateY(-10px);
+    background-color: #7c7474;
+}
+
+.main1-title {
+    font-size: 28px;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 10px;
+    color: #ffeded;
+}
+
+.main1-paragraph {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+
+.editDelete-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    margin-right: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-btn {
+    background-color: #c04c4c;
+}
+
+.edit-btn:hover {
+    background-color: #d66363;
+}
+
+.delete-btn {
+    background-color: #c04c4c;
+}
+
+.delete-btn:hover {
+    background-color: #d66363;
+}
+
+.delete-btn:active {
+    background-color: #c94444;
+    transform: scale(0.95);
+}
+
+.edit-btn:active {
+    background-color: #6e4b4b;
+    transform: scale(0.95);
+}
+
+/* HR Styling */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #613131;
+    margin: 40px auto;
+    width: 90%;
+}
+.create-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.create-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #613131;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Blog Inputs */
+.blog {
+    width: 60%;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 2px solid #d4cccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog:focus {
+    border-color: #613131;
+    outline: none;
+    box-shadow: 0 0 8px rgba(97, 49, 49, 0.4);
+}
+
+.blog-title {
+    font-weight: bold;
+    color: #4f4f4f;
+}
+
+.blog-description {
+    font-size: 16px;
+    color: #4f4f4f;
+    height: 100px;
+
+}
+
+/* Submit Button */
+.create-btn {
+    width: 30%;
+    padding: 15px;
+    background-color: #613131;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.create-btn:hover {
+    background-color: #3b1a1a;
+    transform: translateY(-5px);
+}
+
+.create-btn:active {
+    background-color: #2e1010;
+    transform: translateY(2px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .blog {
+        width: 90%;
+    }
+
+    .create-title {
+        font-size: 28px;
+    }
+
+    .create-btn {
+        width: 50%;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .nav-2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main1 {
+        width: 90%;
+        margin: 20px auto;
+    }
+}

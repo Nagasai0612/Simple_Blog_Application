@@ -1,0 +1,24 @@
+<head>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<form action="/createBlog" method="POST">
+  <div class="create-main">
+    <h1 class="create-title">Create Your Blog!</h1>
+    <input
+      type="text"
+      name="title"
+      placeholder="Write The title ..."
+      class="blog blog-title"
+      required
+    />
+    <input
+      type="text"
+      name="description"
+      placeholder="Write description..."
+      class="blog blog-description"
+      required
+    />
+
+    <input class="create-btn" type="submit" value="Submit" name="submit" />
+  </div>
+</form>

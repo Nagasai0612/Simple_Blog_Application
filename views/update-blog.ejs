@@ -1,0 +1,25 @@
+<head>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<form action="/edit/<%= id %>" method="POST">
+  <div class="create-main">
+    <h1 class="create-title">Edit Blog Post!</h1>
+    <input
+      type="text"
+      name="title"
+      value="<%= titles %>"
+      placeholder="Write The title ..."
+      class="blog blog-title"
+    />
+    <input
+      type="text"
+      name="description"
+      placeholder="Write description..."
+      value="<%= descriptions %>"
+      class="blog blog-description"
+    />
+
+    <input class="create-btn" type="submit" value="Submit" name="submit" />
+  </div>
+</form>

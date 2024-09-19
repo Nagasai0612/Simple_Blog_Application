@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-container">
+      <h1 class="title">Blog</h1>
+      <div class="nav-2">
+        <a class="header-btn" href="/"> <h2>Home</h2></a>
+        <a class="header-btn" href="/createBlog"> <h2>create Blog</h2></a>
+
+       
+      </div>
+    </nav>
+    <hr
+      
+    />
+    <div class="main">
+      <ul>
+       
+        <li>
+          <div class="main1">
+            <h1 class="card main1-title">Title of a longer featured blog post</h1>
+            <p class="card main1-paragraph"></p>
+            <div class="editDelete-btn">
+              <a href="/edit"><button class="edit-btn" name="edit">Edit</button></a>
+             <button class="delete-btn" name="delete" >Delete</button>
+            </div>
+          </div>
+        </li>
+        <% if (locals.posts) { %>
+        <% locals.posts.forEach(post => { %>
+  
+        <li>
+          <div class="main1">
+            <h1 class="card main1-title"><%= post.title %></h1>
+            <p class="card main1-paragraph"><%= post.description %></p>
+            <div class="editDelete-btn">
+              <a href="/edit/<%= post.id%>">
+                <button class="edit-btn" name="edit">Edit</button>
+              </a>
+              <form action="/delete/<%=post.id %>" method="POST"  style="display:inline; background-color: #8e8888;;">
+                <button class="delete-btn" name="delete" >Delete</button>
+              </form>
+            </div>
+          </div>
+        
+        </li>
+        <% }); %>
+      <% } else { %>
+        <p></p>
+        <% } %>
+      </ul>
+     
+     
+    
+      </div>
+    </div>
+  </body>
+</html>
